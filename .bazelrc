@@ -1,6 +1,7 @@
 common --lockfile_mode=off
 
 build --//:use_private_deps=false
+build --explain=build.log
 
 build:internal_import --//:use_private_deps=true
 build:internal_import --@build_bazel_rules_swift//swift:copt=-enable-experimental-feature

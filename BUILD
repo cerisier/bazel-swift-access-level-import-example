@@ -44,7 +44,7 @@ swift_library(
 )
 
 ios_application(
-    name = "HelloWorldSwift",
+    name = "app",
     bundle_id = "com.example.hello-world-swift",
     families = [
         "iphone",
