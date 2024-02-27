@@ -1,0 +1,11 @@
+common --lockfile_mode=off
+
+build --//:use_private_deps=false
+
+build:internal_import --//:use_private_deps=true
+build:internal_import --@build_bazel_rules_swift//swift:copt=-enable-experimental-feature
+build:internal_import --@build_bazel_rules_swift//swift:copt=AccessLevelOnImport
+build:internal_import --@build_bazel_rules_swift//swift:copt=-DINTERNAL_IMPORT 
+
+build:implementation_only_import --//:use_private_deps=true
+build:implementation_only_import --@build_bazel_rules_swift//swift:copt=-DIMPLEMENTATION_ONLY_IMPORT
